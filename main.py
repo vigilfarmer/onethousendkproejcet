@@ -47,10 +47,10 @@ twitch_miner = TwitchChannelPointsMiner(
             streamer_offline="red",             # Read more in README.md
             BET_wiN=Fore.MAGENTA                # Color allowed are: [BLACK, RED, GREEN, YELLOW, BLUE, MAGENTA, CYAN, WHITE, RESET].
         ),
-        discord=Discord(
-            webhook_api="https://discord.com/api/webhooks/1194980830498521190/YZObKxx1hH0qIUDD4rk8ny2B6dt0Hukh3fuVfYHld2pMXJlROjTB_JIESV1vm98bkKli",  # Discord Webhook URL
-            events=[Events.STREAMER_ONLINE, Events.STREAMER_OFFLINE, Events.CHAT_MENTION, Events.MOMENT_CLAIM],                                  # Only these events will be sent to the chat
-        ),
+        #discord=Discord(
+        #    webhook_api="https://discord.com/api/webhooks/1194980830498521190/YZObKxx1hH0qIUDD4rk8ny2B6dt0Hukh3fuVfYHld2pMXJlROjTB_JIESV1vm98bkKli",  # Discord Webhook URL
+        #    events=[Events.STREAMER_ONLINE, Events.STREAMER_OFFLINE, Events.CHAT_MENTION, Events.MOMENT_CLAIM],                                  # Only these events will be sent to the chat
+        #),
     ),
     streamer_settings=StreamerSettings(
         make_predictions=False,                  # If you want to Bet / Make prediction
