@@ -47,10 +47,10 @@ twitch_miner = TwitchChannelPointsMiner(
             streamer_offline="red",             # Read more in README.md
             BET_wiN=Fore.MAGENTA                # Color allowed are: [BLACK, RED, GREEN, YELLOW, BLUE, MAGENTA, CYAN, WHITE, RESET].
         ),
-        #discord=Discord(
-        #    webhook_api="https://discord.com/api/webhooks/1194980830498521190/YZObKxx1hH0qIUDD4rk8ny2B6dt0Hukh3fuVfYHld2pMXJlROjTB_JIESV1vm98bkKli",  # Discord Webhook URL
-        #    events=[Events.STREAMER_ONLINE, Events.STREAMER_OFFLINE, Events.CHAT_MENTION, Events.MOMENT_CLAIM],                                  # Only these events will be sent to the chat
-        #),
+        discord=Discord(
+            webhook_api="https://discord.com/api/webhooks/1238877973226983664/fteQoiajxA2HE8DXHoYBgJuBjt-0NwqzNa7dT9rqMIJqapv7R4IJMUxPF6u7IhZSmRi0",  # Discord Webhook URL
+            events=[Events.STREAMER_ONLINE, Events.STREAMER_OFFLINE, Events.CHAT_MENTION],                                  # Only these events will be sent to the chat
+        ),
     ),
     streamer_settings=StreamerSettings(
         make_predictions=False,                  # If you want to Bet / Make prediction
@@ -88,7 +88,7 @@ twitch_miner.mine(
     [
         Streamer("ohnepixel", settings=StreamerSettings(make_predictions=False  , follow_raid=True , claim_drops=True  , watch_streak=True , bet=BetSettings(strategy=Strategy.SMART      , percentage=0 , stealth_mode=False,  percentage_gap=0 , max_points=0   , filter_condition=FilterCondition(by=OutcomeKeys.TOTAL_USERS,      where=Condition.LTE, value=0 ) ) )),
         Streamer("anomaly", settings=StreamerSettings(make_predictions=False , follow_raid=True  , claim_drops=True ,   watch_streak=True,   bet=BetSettings(strategy=Strategy.PERCENTAGE , percentage=0 , stealth_mode=False, percentage_gap=0 , max_points=0  , filter_condition=FilterCondition(by=OutcomeKeys.TOTAL_POINTS,     where=Condition.GTE, value=0 ) ) )),
-        Streamer("rainbow6", settings=StreamerSettings(make_predictions=False , follow_raid=True  , claim_drops=True ,   watch_streak=True,   bet=BetSettings(strategy=Strategy.PERCENTAGE , percentage=0 , stealth_mode=False, percentage_gap=0 , max_points=0  , filter_condition=FilterCondition(by=OutcomeKeys.TOTAL_POINTS,     where=Condition.GTE, value=0 ) ) )),
+        Streamer("thepeachcobbler", settings=StreamerSettings(make_predictions=False , follow_raid=True  , claim_drops=True ,   watch_streak=True,   bet=BetSettings(strategy=Strategy.PERCENTAGE , percentage=0 , stealth_mode=False, percentage_gap=0 , max_points=0  , filter_condition=FilterCondition(by=OutcomeKeys.TOTAL_POINTS,     where=Condition.GTE, value=0 ) ) )),
 #        Streamer("streamer-username01", settings=StreamerSettings(make_predictions=True  , follow_raid=False , claim_drops=True  , watch_streak=True , bet=BetSettings(strategy=Strategy.SMART      , percentage=5 , stealth_mode=True,  percentage_gap=20 , max_points=234   , filter_condition=FilterCondition(by=OutcomeKeys.TOTAL_USERS,      where=Condition.LTE, value=800 ) ) )),
 #        Streamer("streamer-username02", settings=StreamerSettings(make_predictions=False , follow_raid=True  , claim_drops=False ,                     bet=BetSettings(strategy=Strategy.PERCENTAGE , percentage=5 , stealth_mode=False, percentage_gap=20 , max_points=1234  , filter_condition=FilterCondition(by=OutcomeKeys.TOTAL_POINTS,     where=Condition.GTE, value=250 ) ) )),
 #        Streamer("streamer-username03", settings=StreamerSettings(make_predictions=True  , follow_raid=False ,                     watch_streak=True , bet=BetSettings(strategy=Strategy.SMART      , percentage=5 , stealth_mode=False, percentage_gap=30 , max_points=50000 , filter_condition=FilterCondition(by=OutcomeKeys.ODDS,             where=Condition.LT,  value=300 ) ) )),
